@@ -55,8 +55,8 @@ Evita la "amnesia" entre sesiones con una base de datos SQLite.
 # Clonar Engram
 git clone https://github.com/Gentleman-Programming/engram.git ~/.engram
 
-# Instalar
-cd ~/.engram && npm install
+# Instalación automática (detecta SO y hace symlink)
+cd ~/.engram && ./setup.sh
 
 # Verificar
 engram --version
@@ -136,9 +136,11 @@ git worktree remove ../agent-feature-A
 Para tareas muy complejas, divide el trabajo entre agentes especializados.
 
 ```bash
-# Instalar
+# Clonar repositorio
 git clone https://github.com/Gentleman-Programming/agent-teams-lite.git ~/.agent-teams
-cd ~/.agent-teams && npm install
+
+# Configurar para OpenCode y agentes locales automáticamente
+cd ~/.agent-teams && ./scripts/setup.sh --all
 ```
 
 ### Roles de los agentes:
